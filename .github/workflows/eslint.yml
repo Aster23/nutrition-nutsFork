@@ -28,16 +28,17 @@ jobs:
 
       - name: Install ESLint
         run: npm install -g eslint@^8.23.1
-        
-      - name: Instal ESLint React Plugin
-        run: npm install -g eslint-plugin-react@^7.31.8
 
       - name: Run Web ESLint
         working-directory: ./packages/web
-        run: npm run lint
+        run: |
+          npm install -g eslint-plugin-react@^7.31.8
+          npm run lint
         continue-on-error: true
       
       - name: Run API ESLint
         working-directory: ./packages/api
-        run: npm run lint
+        run: |
+          npm install -g eslint-plugin-react@^7.31.8
+          npm run lint
         continue-on-error: true
