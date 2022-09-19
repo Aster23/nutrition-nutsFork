@@ -34,11 +34,11 @@ jobs:
         run: |
           npm install eslint-plugin-react@latest --save-dev
           npm run lint
-        continue-on-error: true
+        continue-on-error: false
       
       - name: Run API ESLint
         working-directory: ./packages/api
         run: |
           npm install eslint-plugin-react@latest --save-dev
           npm run lint
-        continue-on-error: true
+        continue-on-error: false
