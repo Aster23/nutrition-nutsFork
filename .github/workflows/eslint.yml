@@ -32,13 +32,13 @@ jobs:
       - name: Run Web ESLint
         working-directory: ./packages/web
         run: |
-          npm install -g eslint-plugin-react@^7.31.8
+          npm install eslint-plugin-react@latest --save-dev
           npm run lint
         continue-on-error: true
       
       - name: Run API ESLint
         working-directory: ./packages/api
         run: |
-          npm install -g eslint-plugin-react@^7.31.8
+          npm install eslint-plugin-react@latest --save-dev
           npm run lint
         continue-on-error: true
