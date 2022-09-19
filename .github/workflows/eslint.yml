@@ -29,6 +29,7 @@ jobs:
       - name: Install ESLint
         run: |
           npm install -g eslint@^8.23.1
+          npm install -g eslint-plugin-react@^7.31.8
 
       - name: Run Web ESLint
         working-directory: ./packages/web
