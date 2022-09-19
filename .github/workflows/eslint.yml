@@ -30,6 +30,12 @@ jobs:
         run: |
           npm install -g eslint@^8.23.1
 
-      - name: Run ESLint
+      - name: Run Web ESLint
+        working-directory: ./packages/web
+        run: npm run lint
+        continue-on-error: true
+      
+      - name: Run API ESLint
+        working-directory: ./packages/api
         run: npm run lint
         continue-on-error: true
